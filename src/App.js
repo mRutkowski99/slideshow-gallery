@@ -1,5 +1,13 @@
+import GlobalStyles from "./GlobalStyles";
+import Layout from "./layout/Layout";
+
 function App() {
-  return <h1>Hello there</h1>;
+  return (
+    <>
+      <GlobalStyles />
+      <Layout>hello there</Layout>
+    </>
+  );
 }
 
 export default App;
