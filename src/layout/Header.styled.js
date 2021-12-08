@@ -6,11 +6,13 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   border-bottom: solid 1px #aaa;
+  max-width: 120rem;
+  margin: 0 auto;
 
   img {
-    width: 40%;
+    width: min(40%, 20rem);
   }
 `;
 

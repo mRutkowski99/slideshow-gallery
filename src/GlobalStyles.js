@@ -28,6 +28,17 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         cursor: pointer;
     }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
 `;
 
 export default GlobalStyles;

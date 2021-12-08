@@ -1,4 +1,4 @@
-import logo from "../assets/shared/logo.svg";
+import logo from "../assets/logo.svg";
 import { StyledHeader, SlideshowLink } from "./Header.styled";
 import { Link } from "react-router-dom";
 
