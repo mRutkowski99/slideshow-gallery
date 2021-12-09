@@ -2,7 +2,7 @@ import { Column } from "../../layout/Layout.styled";
 
 import data from "../../data.json";
 import useWindowWidth from "../../hooks/useWindowWidth";
-import createPaintingsArray from "../../hooks/createPaintingsArray";
+import createPaintingsArray from "../../helpers/createPaintingsArray";
 
 const paintingsArr = createPaintingsArray(data);
 

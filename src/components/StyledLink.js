@@ -5,10 +5,20 @@ const Link = styled.a`
   letter-spacing: 1px;
   color: #999;
   font-size: 1.2rem;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #666;
+    transform: scale(1.1);
+  }
 `;
 
 const StyledLink = (props) => (
-  <Link href={props.href || "#"} target={props.target || "_self"}>
+  <Link
+    href={props.href || "#"}
+    target={props.target || "_self"}
+    onClick={props.onClick}
+  >
     {props.children}
   </Link>
 );
