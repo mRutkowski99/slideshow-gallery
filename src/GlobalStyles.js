@@ -39,6 +39,18 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
     }
 
+    h4 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+        color: #999;
+        font-weight: 400;
+    }
+
 `;
 
 export default GlobalStyles;
