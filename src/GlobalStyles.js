@@ -55,6 +55,7 @@ const GlobalStyles = createGlobalStyle`
         color: #555;
         line-height: 1.5;
         margin-bottom: 3rem;
+        max-width: 70ch;
     }
 `;
 
