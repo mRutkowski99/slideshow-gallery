@@ -15,11 +15,3 @@ export const StyledHeader = styled.header`
     width: min(40%, 20rem);
   }
 `;
-
-export const SlideshowLink = styled.a`
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #999;
-  text-align: right;
-  font-size: 1.2rem;
-`;

@@ -51,6 +51,11 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
     }
 
+    p {
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 3rem;
+    }
 `;
 
 export default GlobalStyles;

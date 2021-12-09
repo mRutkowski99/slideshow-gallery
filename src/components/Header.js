@@ -1,13 +1,13 @@
 import logo from "../assets/logo.svg";
-import { StyledHeader, SlideshowLink } from "./Header.styled";
-import { Link } from "react-router-dom";
+import { StyledHeader } from "./Header.styled";
+import StyledLink from "./StyledLink";
 
 const Header = () => {
   return (
     <StyledHeader>
       <img src={logo} alt="Gallery App logo" />
 
-      <SlideshowLink>start slideshow</SlideshowLink>
+      <StyledLink>start slideshow</StyledLink>
     </StyledHeader>
   );
 };
