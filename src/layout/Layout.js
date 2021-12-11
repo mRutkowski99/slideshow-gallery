@@ -1,12 +1,7 @@
-import Header from "../components/Header";
-import { Main } from "./Layout.styled";
+import { StyledLayout } from "./Layout.styled";
 
 const Layout = (props) => {
-  return (
-    <>
-      <Main>{props.children}</Main>
-    </>
-  );
+  return <StyledLayout>{props.children}</StyledLayout>;
 };
 
 export default Layout;

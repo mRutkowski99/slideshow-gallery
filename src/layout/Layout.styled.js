@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
-  padding: 2rem;
-  display: flex;
-  gap: 4rem;
+export const StyledLayout = styled.div`
   max-width: 120rem;
+  min-height: 100vh;
   margin: 0 auto;
-`;
-
-export const Column = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  align-items: stretch;
+  justify-content: space-between;
 `;
