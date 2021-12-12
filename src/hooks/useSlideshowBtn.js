@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
-const useSlideshowBtn = (location) => {
+const useSlideshowBtn = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const [inGallery, setInGallery] = useState(true);
 
-  useEffect(() => setInGallery(location === "/gallery"), [location]);
+  useEffect(() => setInGallery(location.pathname === "/gallery"), [location]);
 
   const btnText = inGallery ? "start slideshow" : "stop slideshow";
 

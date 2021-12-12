@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -9,8 +8,12 @@ export const StyledHeader = styled.header`
   padding: 2rem;
   border-bottom: solid 1px #aaa;
 
-  img {
+  & + a {
     width: min(40%, 20rem);
-    cursor: pointer;
+
+    img {
+      width: 100%;
+      display: block;
+    }
   }
 `;

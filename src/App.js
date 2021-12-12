@@ -5,29 +5,34 @@ import DetailPage from "./pages/Detail/DetailPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
       <GlobalStyles />
       <ScrollToTop />
       <Layout>
         <Header />
-        <Routes>
-          <Route path="/" element={<Navigate to="/gallery" />} />
-          <Route path="/gallery" element={<Masonry />} />
-          <Route
-            path="/gallery/:id"
-            element={
-              <>
-                <DetailPage />
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
+        <AnimatePresence>
+          <Routes location={location} key={location.key}>
+            <Route path="/" element={<Navigate to="/gallery" />} />
+            <Route path="/gallery" element={<Masonry />} />
+            <Route
+              path="/gallery/:id"
+              element={
+                <>
+                  <DetailPage />
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
       </Layout>
     </>
   );

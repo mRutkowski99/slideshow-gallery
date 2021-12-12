@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledPainting = styled.div`
+export const StyledPainting = styled(motion.div)`
   width: 100%;
   aspect-ratio: ${(props) => props.aspectRatio};
   background: linear-gradient(#0005, #0005), url(${(props) => props.bgSrc});
@@ -14,7 +15,6 @@ export const StyledPainting = styled.div`
   align-items: flex-start;
   gap: 0.5rem;
   cursor: pointer;
-  transition: all 0.2s;
 
   &:hover {
     transform: scale(1.05);

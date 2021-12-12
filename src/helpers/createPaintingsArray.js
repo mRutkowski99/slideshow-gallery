@@ -1,6 +1,7 @@
+import data from "../data.json";
 import Painting from "../pages/Gallery/Painting";
 
-const createPaintingsArray = (data) => {
+const createPaintingsArray = () => {
   return data.map((painting, idx) => {
     const author = painting.artist.name;
     const aspectRatio =
