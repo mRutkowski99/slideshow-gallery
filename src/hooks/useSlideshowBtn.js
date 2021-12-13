@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate } from "react-router";
+import { useContext } from "react";
+import Context from "../store/AppContext";
 
 const useSlideshowBtn = () => {
-  const location = useLocation();
   const navigate = useNavigate();
-  const [inGallery, setInGallery] = useState(true);
+  const context = useContext(Context);
 
-  useEffect(() => setInGallery(location.pathname === "/gallery"), [location]);
+  const btnText = context.inGallery ? "start slideshow" : "stop slideshow";
 
-  const btnText = inGallery ? "start slideshow" : "stop slideshow";
-
-  const toggleSlideshowHandler = () => {
-    if (inGallery) navigate("/gallery/0");
+  const toggleSlideshowHandler = (event) => {
+    event.preventDefault();
+    if (context.inGallery) navigate("/gallery/0");
     else navigate("/gallery");
   };
 

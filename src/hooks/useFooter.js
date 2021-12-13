@@ -1,10 +1,11 @@
 import data from "../data.json";
-import { useParams } from "react-router";
+import { useContext } from "react";
+import Context from "../store/AppContext";
 
 const useFooter = () => {
-  const params = useParams();
-  const artist = data[+params.id].artist.name;
-  const title = data[+params.id].name;
+  const context = useContext(Context);
+  const artist = data[context.pageId].artist.name;
+  const title = data[context.pageId].name;
 
   return {
     artist,

@@ -9,14 +9,14 @@ const Link = styled.a`
 
   &:hover {
     color: #666;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 `;
 
 const StyledLink = (props) => (
   <Link
     href={props.href || ""}
-    target={props.target || "_self"}
+    target={props.target || ""}
     onClick={props.onClick}
   >
     {props.children}

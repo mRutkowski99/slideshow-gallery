@@ -4,16 +4,18 @@ import Masonry from "./pages/Gallery/Masonry";
 import DetailPage from "./pages/Detail/DetailPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./helpers/ScrollToTop";
+import Context, { ContextProvider } from "./store/AppContext";
+import { useContext } from "react";
 
 function App() {
   const location = useLocation();
+  const context = useContext(Context);
 
   return (
-    <>
+    <ContextProvider>
       <GlobalStyles />
       <ScrollToTop />
       <AnimatePresence exitBeforeEnter>
@@ -27,14 +29,14 @@ function App() {
               element={
                 <>
                   <DetailPage />
-                  <Footer />
                 </>
               }
             />
           </Routes>
+          {!context.inGallery && <Footer />}
         </Layout>
       </AnimatePresence>
-    </>
+    </ContextProvider>
   );
 }
 

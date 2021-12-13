@@ -1,5 +1,6 @@
 import { Column, StyledMasonry } from "./Masonry.styled";
-
+import { useContext } from "react";
+import Context from "../../store/AppContext";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import createPaintingsArray from "../../helpers/createPaintingsArray";
 
@@ -48,7 +49,10 @@ const columnVariant = {
 };
 
 const Masonry = () => {
+  const context = useContext(Context);
   const width = useWindowWidth();
+
+  context.toggleInGallery(true);
 
   let columns = 1;
   if (width >= 650) columns = 2;
