@@ -1,8 +1,6 @@
 import logo from "../assets/logo.svg";
 import { StyledHeader } from "./Header.styled";
 import StyledLink from "./StyledLink";
-
-import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useSlideshowBtn from "../hooks/useSlideshowBtn";
 

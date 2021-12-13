@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledDetailPage = styled.main`
+export const StyledDetailPage = styled(motion.main)`
   padding: 2rem;
   display: flex;
   flex-direction: column;

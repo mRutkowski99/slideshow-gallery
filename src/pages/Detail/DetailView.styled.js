@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledDetailView = styled.section`
+export const StyledDetailView = styled(motion.section)`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: min-content min-content;

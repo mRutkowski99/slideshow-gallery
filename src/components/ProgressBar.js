@@ -16,7 +16,7 @@ const StyledProgressBar = styled.div`
     bottom: 0;
     left: 0;
     width: ${(props) => props.width}%;
-    background-color: #666;
+    background-color: #000;
   }
 `;
 

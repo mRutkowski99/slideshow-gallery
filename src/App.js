@@ -16,10 +16,10 @@ function App() {
     <>
       <GlobalStyles />
       <ScrollToTop />
-      <Layout>
-        <Header />
-        <AnimatePresence>
-          <Routes location={location} key={location.key}>
+      <AnimatePresence exitBeforeEnter>
+        <Layout key={location.key}>
+          <Header />
+          <Routes location={location}>
             <Route path="/" element={<Navigate to="/gallery" />} />
             <Route path="/gallery" element={<Masonry />} />
             <Route
@@ -32,8 +32,8 @@ function App() {
               }
             />
           </Routes>
-        </AnimatePresence>
-      </Layout>
+        </Layout>
+      </AnimatePresence>
     </>
   );
 }

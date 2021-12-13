@@ -28,6 +28,7 @@ const Painting = ({ title, author, src, aspectRatio, id }) => {
       aspectRatio={aspectRatio}
       onClick={displayDetailHandler}
       variants={paitingVariant}
+      whileHover={{ scale: 1.1 }}
     >
       <h2>{title}</h2>
       <h3>{author}</h3>

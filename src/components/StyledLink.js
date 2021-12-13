@@ -15,7 +15,7 @@ const Link = styled.a`
 
 const StyledLink = (props) => (
   <Link
-    href={props.href || "#"}
+    href={props.href || ""}
     target={props.target || "_self"}
     onClick={props.onClick}
   >

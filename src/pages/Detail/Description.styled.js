@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledDescription = styled.section`
+export const StyledDescription = styled(motion.section)`
   padding: 10rem 0 2rem;
   position: relative;
 
