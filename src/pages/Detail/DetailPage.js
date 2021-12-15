@@ -4,8 +4,9 @@ import DetailView from "./DetailView";
 import Description from "./Description";
 import { useParams } from "react-router";
 import useAnimatedYear from "../../hooks/useAnimatedYear";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Context from "../../store/AppContext";
+import Modal from "../../components/Modal";
 
 const DetailPage = () => {
   const params = useParams();
@@ -13,10 +14,14 @@ const DetailPage = () => {
 
   context.toggleInGallery(false);
 
+  //If app was initially entered on detail page or detail was was reload update page id
+  useEffect(() => context.setPageId(+params.id), []);
+
   const painting = data[params.id];
   const { name, year, description, source } = painting;
   const { name: artistName, image: artistImage } = painting.artist;
-  const { thumbnail, thumbwidth, thumbheight } = painting.images;
+  const { thumbnail, thumbwidth, thumbheight, bigwidth, bigheight } =
+    painting.images;
   const { small: heroSmall, large: heroLarge } = painting.images.hero;
 
   const animatedYear = useAnimatedYear(year);
@@ -60,6 +65,10 @@ const DetailPage = () => {
         source={source}
         year={animatedYear}
       />
+
+      {context.showModal && (
+        <Modal src={heroLarge} ratio={bigwidth / bigheight} />
+      )}
     </StyledDetailPage>
   );
 };

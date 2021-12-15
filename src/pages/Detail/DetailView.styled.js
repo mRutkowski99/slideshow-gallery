@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-export const StyledDetailView = styled(motion.section)`
+export const StyledDetailView = styled.section`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: min-content min-content;
@@ -15,9 +14,14 @@ export const StyledDetailView = styled(motion.section)`
     background-size: cover;
     width: 100%;
     aspect-ratio: ${(props) => props.ratio};
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     @media (min-width: 700px) {
       grid-column: 1 / 5;
+      align-items: flex-end;
     }
   }
 

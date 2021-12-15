@@ -5,7 +5,6 @@ export const StyledDetailPage = styled(motion.main)`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  position: relative;
 
   @media (min-width: 1200px) {
     flex-direction: row;

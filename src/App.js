@@ -14,6 +14,8 @@ function App() {
   const location = useLocation();
   const context = useContext(Context);
 
+  console.log(context);
+
   return (
     <ContextProvider>
       <GlobalStyles />
@@ -29,11 +31,12 @@ function App() {
               element={
                 <>
                   <DetailPage />
+                  <Footer />
                 </>
               }
             />
           </Routes>
-          {!context.inGallery && <Footer />}
+          {/* {!context.inGallery && <Footer />} */}
         </Layout>
       </AnimatePresence>
     </ContextProvider>
